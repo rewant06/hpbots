@@ -1,17 +1,16 @@
 import React from 'react';
 import styles from '../landing/styless/Hero.module.css';
 
-
 const Hero: React.FC = () => {
     return (
       <section id="hero" className={styles.hero}>
         <div className={styles.heroContent}>
           <h1>Need Help? We are here for You</h1>
-          <p>{"Don't keep secret share it anonymously"}</p>
+          <p>{"Don&apos;t keep secrets—share them anonymously."}</p>
 
           <div className={styles.ctaButtons}>
-            <button className={styles.btnPrimary}>Get Started</button>
-            <button className={styles.btnSecondary}>Learn More</button>
+            <button type="button" className={styles.btnPrimary}>Get Started</button>
+            <button type="button" className={styles.btnSecondary}>Learn More</button>
           </div>
         </div>
         <div className={styles.heroImage}>
@@ -30,5 +29,5 @@ const Hero: React.FC = () => {
       </section>
     );
   };
-  
-  export default Hero;
+
+export default Hero;
