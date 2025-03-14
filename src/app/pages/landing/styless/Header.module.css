@@ -1,7 +1,7 @@
 .header {
   background: #333;
   color: #fff;
-  padding: 0.5rem 0; /* Decreased padding */
+  padding: 0.7rem 0; /* Decreased padding */
   text-align: center;
   position: fixed; /* Ensure the header is always visible */
   top: 0;
@@ -17,17 +17,17 @@
 
 .logoContainer {
   float: left;
-  margin-left: 10px; /* Decreased margin */
+  margin-left: 15px; /* Decreased margin */
 }
 
 .logo {
-  width: 40px; /* Decreased logo size */
+  width: 50px; /* Decreased logo size */
   height: auto;
 }
 
 .nav {
   float: right;
-  margin-right: 10px; /* Decreased margin */
+  margin-right: 15px; /* Decreased margin */
 }
 
 .navList {
@@ -38,7 +38,7 @@
 
 .navItem {
   display: inline;
-  margin-left: 10px; /* Decreased margin */
+  margin-left: 15px; /* Decreased margin */
 }
 
 .navItem a {
@@ -56,7 +56,7 @@
   }
 
   .logo {
-      width: 35px; /* Adjust logo size for tablets */
+      width: 40px; /* Adjust logo size for tablets */
   }
 
   .nav {
@@ -84,7 +84,7 @@
       border: none;
       cursor: pointer;
       margin: 0 auto;
-      font-size: 1rem; /* Decreased font size */
+      font-size: 1.3rem; /* Decreased font size */
       position: absolute;
       right: 10px; /* Adjusted position */
       top: 10px; /* Adjusted position */
@@ -97,7 +97,7 @@
 
 @media (max-width: 480px) {
   .logo {
-      width: 30px; /* Adjust logo size for mobile */
+      width: 40px; /* Adjust logo size for mobile */
   }
 
   .navbarToggle {
