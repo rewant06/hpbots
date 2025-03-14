@@ -7,8 +7,8 @@ import Header from '../components/Header'
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Advertisement from '../components/Advertisement';
-// import Services from '../components/Services';
-// import Pricing from '../components/Pricing';
+import Services from '../components/Services';
+import Pricing from '../components/Pricing';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import styles from '../landing/styless/Home.module.css';
@@ -40,10 +40,10 @@ const HelpingBotsLanding2: React.FC = () => {
       <div className={styles.sidebarAd}>
         <p>Sponsored Content</p>
       </div>
-      {/* <Services /> */}
+      <Services />
       <Features />
       <Advertisement />
-      {/* <Pricing /> */}
+      <Pricing />
       <div className={styles.footerAd}>
         <p>Special Offers</p>
       </div>
