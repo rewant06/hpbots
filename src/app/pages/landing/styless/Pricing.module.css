@@ -1,0 +1,46 @@
+.pricing {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .pricing h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pricingPlans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .plan {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .plan h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .plan .price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .plan ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .plan li {
+    padding: 0.5rem 0;
+  }

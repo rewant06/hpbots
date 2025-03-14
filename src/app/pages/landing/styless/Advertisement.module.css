@@ -1,0 +1,36 @@
+.advertisement {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #eee;
+  }
+  
+  .advertisement h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .adContainer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .sidebarAd {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .footerAd {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+  }
