@@ -1,9 +1,9 @@
 .header {
   background: #333;
   color: #fff;
-  padding: 1rem 0;
+  padding: 0.5rem 0; /* Decreased padding */
   text-align: center;
-  position: fixed; /* Changed from sticky to fixed */
+  position: fixed; /* Ensure the header is always visible */
   top: 0;
   width: 100%; /* Ensure the header takes the full width */
   z-index: 100;
@@ -17,17 +17,17 @@
 
 .logoContainer {
   float: left;
-  margin-left: 20px;
+  margin-left: 10px; /* Decreased margin */
 }
 
 .logo {
-  width: 60px;
+  width: 40px; /* Decreased logo size */
   height: auto;
 }
 
 .nav {
   float: right;
-  margin-right: 20px;
+  margin-right: 10px; /* Decreased margin */
 }
 
 .navList {
@@ -38,12 +38,13 @@
 
 .navItem {
   display: inline;
-  margin-left: 20px;
+  margin-left: 10px; /* Decreased margin */
 }
 
 .navItem a {
   color: #fff;
   text-decoration: none;
+  font-size: 0.9rem; /* Decreased font size */
 }
 
 /* Responsive styles */
@@ -55,7 +56,7 @@
   }
 
   .logo {
-      width: 90px; /* Increase logo size for tablets */
+      width: 35px; /* Adjust logo size for tablets */
   }
 
   .nav {
@@ -79,14 +80,14 @@
       display: block;
       background: #333;
       color: #fff;
-      padding: 0.5rem 1rem;
+      padding: 0.4rem 0.8rem; /* Decreased padding */
       border: none;
       cursor: pointer;
       margin: 0 auto;
-      font-size: 1.5rem; /* Increase font size for the icon */
+      font-size: 1rem; /* Decreased font size */
       position: absolute;
-      right: 20px;
-      top: 15px;
+      right: 10px; /* Adjusted position */
+      top: 10px; /* Adjusted position */
   }
 
   .navVisible .navList {
@@ -96,11 +97,11 @@
 
 @media (max-width: 480px) {
   .logo {
-      width: 90px; /* Increase logo size for mobile */
+      width: 30px; /* Adjust logo size for mobile */
   }
 
   .navbarToggle {
-      padding: 0.4rem 0.8rem;
+      padding: 0.3rem 0.6rem; /* Decreased padding */
   }
 }
 
