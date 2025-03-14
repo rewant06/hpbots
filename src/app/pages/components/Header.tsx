@@ -21,15 +21,21 @@ const Header: React.FC = () => {
   };
 
   useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        hideNavbar();
+      }
+    };
+  
     if (isNavVisible) {
       document.addEventListener('click', handleClickOutside);
-    } else {
-      document.removeEventListener('click', handleClickOutside);
     }
+  
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
   }, [isNavVisible]);
+  
 
   return (
     <header className={styles.header}>
