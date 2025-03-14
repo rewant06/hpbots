@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../landing/styless/Header.module.css';
 
 const Header: React.FC = () => {
@@ -33,7 +34,9 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-        <Image src="/logo.png" alt="Helping Bots Logo" className={styles.logo} width={50} height={50} />
+        <Link href="/">
+          <Image src="/logo.png" alt="Helping Bots Logo" className={styles.logo} width={50} height={50} />
+        </Link>
       </div>
       <button className={styles.navbarToggle} onClick={toggleNavbar}>&#9776;</button>
       <nav ref={navRef} className={`${styles.nav} ${isNavVisible ? styles.navVisible : ''}`}>
