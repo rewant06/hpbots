@@ -14,28 +14,21 @@ const Header: React.FC = () => {
     setIsNavVisible(false);
   };
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (navRef.current && !navRef.current.contains(event.target as Node)) {
-      hideNavbar();
-    }
-  };
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         hideNavbar();
       }
     };
-  
+
     if (isNavVisible) {
       document.addEventListener('click', handleClickOutside);
     }
-  
+
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  }, [isNavVisible]);
-  
+  }, [isNavVisible]); // Dependency array remains the same
 
   return (
     <header className={styles.header}>
