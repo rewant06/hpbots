@@ -22,10 +22,9 @@
   max-width: 400px;
 }
 
-.heroImage svg {
+.heroImagePng {
   width: 100%;
   height: auto;
-  animation: pulse 5s infinite alternate;
 }
 
 @keyframes pulse {
@@ -71,7 +70,6 @@
 @media (max-width: 768px) {
   .hero {
       padding: 2rem 1rem;
-      padding-top: 6rem; /* Add padding to account for the fixed header */
       flex-direction: column;
   }
 
@@ -88,12 +86,21 @@
       font-size: 0.9rem;
       margin: 0.5rem 0;
   }
+
+  .heroImage {
+      order: -1; /* Move the image to the top */
+      max-width: 100%;
+  }
+
+  .heroImagePng {
+      width: 100%;
+      height: auto;
+  }
 }
 
 @media (max-width: 480px) {
   .hero {
       padding: 1rem 0.5rem;
-      padding-top: 6rem; /* Add padding to account for the fixed header */
   }
 
   .hero h1 {
@@ -108,5 +115,15 @@
       padding: 0.6rem 1rem;
       font-size: 0.8rem;
       margin: 0.5rem 0;
+  }
+
+  .heroImage {
+      order: -1; /* Move the image to the top */
+      max-width: 100%;
+  }
+
+  .heroImagePng {
+      width: 100%;
+      height: auto;
   }
 }
