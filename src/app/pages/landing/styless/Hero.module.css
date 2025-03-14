@@ -120,6 +120,7 @@
   .heroImage {
       order: -1; /* Move the image to the top */
       max-width: 100%;
+      margin-top: 20px; /* Add this line to shift the image down */
   }
 
   .heroImagePng {
