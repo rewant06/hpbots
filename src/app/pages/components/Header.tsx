@@ -1,15 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from '../landing/styless/Header.module.css';
 
 const Header: React.FC = () => {
+  const [isNavVisible, setIsNavVisible] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  const toggleNavbar = () => {
+    setIsNavVisible(!isNavVisible);
+  };
+
+  const hideNavbar = () => {
+    setIsNavVisible(false);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (navRef.current && !navRef.current.contains(event.target as Node)) {
+      hideNavbar();
+    }
+  };
+
+  useEffect(() => {
+    if (isNavVisible) {
+      document.addEventListener('click', handleClickOutside);
+    } else {
+      document.removeEventListener('click', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isNavVisible]);
+
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
         <Image src="/logo.png" alt="Helping Bots Logo" className={styles.logo} width={50} height={50} />
       </div>
-      <nav className={styles.nav}>
-        <ul className={styles.navList}>
+      <button className={styles.navbarToggle} onClick={toggleNavbar}>&#9776;</button>
+      <nav ref={navRef} className={`${styles.nav} ${isNavVisible ? styles.navVisible : ''}`}>
+        <ul className={styles.navList} onClick={hideNavbar}>
           <li className={styles.navItem}><a href="#features" className={styles.navLink}>Features</a></li>
           <li className={styles.navItem}><a href="#security" className={styles.navLink}>Security</a></li>
           <li className={styles.navItem}><a href="#pricing" className={styles.navLink}>Pricing</a></li>

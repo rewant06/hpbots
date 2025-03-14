@@ -1,46 +1,110 @@
 .header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .header::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-  
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logoContainer {
+  float: left;
+  margin-left: 20px;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.nav {
+  float: right;
+  margin-right: 20px;
+}
+
+.navList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navItem {
+  display: inline;
+  margin-left: 20px;
+}
+
+.navItem a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .logoContainer {
-    float: left;
-    margin-left: 20px;
+      float: none;
+      margin: 0 auto;
+      text-align: center;
   }
-  
+
   .logo {
-    width: 50px;
-    height: auto;
+      width: 90px; /* Increase logo size for tablets */
   }
-  
+
   .nav {
-    float: right;
-    margin-right: 20px;
+      float: none;
+      margin: 0 auto;
+      text-align: center;
   }
-  
+
   .navList {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+      display: none;
+      flex-direction: column;
+      align-items: center;
   }
-  
+
   .navItem {
-    display: inline;
-    margin-left: 20px;
+      display: block;
+      margin: 10px 0;
   }
-  
-  .navItem a {
-    color: #fff;
-    text-decoration: none;
+
+  .navbarToggle {
+      display: block;
+      background: #333;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      cursor: pointer;
+      margin: 0 auto;
+      font-size: 1.5rem; /* Increase font size for the icon */
+      position: absolute;
+      right: 20px;
+      top: 15px;
   }
+
+  .navVisible .navList {
+      display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+      width: 90px; /* Increase logo size for mobile */
+  }
+
+  .navbarToggle {
+      padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbarToggle {
+      display: none; /* Hide navbar toggle button on larger screens */
+  }
+}
