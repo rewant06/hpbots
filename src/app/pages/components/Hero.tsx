@@ -7,7 +7,8 @@ const Hero: React.FC = () => {
       <section id="hero" className={styles.hero}>
         <div className={styles.heroContent}>
           <h1>Need Help? We are here for You</h1>
-          <p>Don't keep secret share it  anonymously</p>
+          <p>{"Don't keep secret share it anonymously"}</p>
+
           <div className={styles.ctaButtons}>
             <button className={styles.btnPrimary}>Get Started</button>
             <button className={styles.btnSecondary}>Learn More</button>

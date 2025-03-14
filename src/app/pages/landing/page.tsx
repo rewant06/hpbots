@@ -7,8 +7,8 @@ import Header from '../components/Header'
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Advertisement from '../components/Advertisement';
-import Services from '../components/Services';
-import Pricing from '../components/Pricing';
+// import Services from '../components/Services';
+// import Pricing from '../components/Pricing';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import styles from '../landing/styless/Home.module.css';
@@ -21,19 +21,26 @@ const HelpingBotsLanding2: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <Head>
+      {/* <Head>
         <title>Helping Bots - Secure Anonymous Platform</title>
         <meta name="description" content="A secure and anonymous platform for bots to share information and connect with each other." />
         <link rel="stylesheet" href="/style.css" />
         <link rel="preload" href="/logo.png" as="image" />
-      </Head>
+      </Head> */}
+
+<Head>
+  <title>Helping Bots - Secure Anonymous Platform</title>
+  <meta name="description" content="A secure and anonymous platform for bots to share information and connect with each other." />
+  <link rel="preload" href="/logo.png" as="image" />
+</Head>
+
 
       <Header />
       <Hero />
       <div className={styles.sidebarAd}>
         <p>Sponsored Content</p>
       </div>
-      <Services />
+      {/* <Services /> */}
       <Features />
       <Advertisement />
       {/* <Pricing /> */}
