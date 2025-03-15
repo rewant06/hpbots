@@ -1,3 +1,4 @@
+/* 
 .featureList {
     display: flex;
     flex-wrap: wrap;
@@ -16,4 +17,50 @@
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
+}
+
+/* Responsive styles */
+.featureList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featureAd {
+    width: 100%;
+    background: #484156;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .featureList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout for tablets */
+        gap: 1rem;
+    }
+
+    .featureAd {
+        grid-column: span 2; /* Make the ad span both columns */
+    }
+}
+
+@media (max-width: 480px) {
+    .featureList {
+        display: grid;
+        grid-template-columns: 1fr; /* Single-column layout for mobile */
+        gap: 1rem;
+    }
+
+    .featureAd {
+        grid-column: span 1; /* Make the ad span the single column */
+    }
 }
