@@ -29,20 +29,26 @@ const Header: React.FC = () => {
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  }, [isNavVisible]); // Dependency array remains the same
+  }, [isNavVisible]);
 
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-        <Link href="/">
-          <Image src="/logo.png" alt="Helping Bots Logo" className={styles.logo} width={50} height={50} />
+        <Link href="/" legacyBehavior>
+          <a>
+            <Image src="/logo.png" alt="Helping Bots Logo" className={styles.logo} width={50} height={50} />
+          </a>
         </Link>
       </div>
       <button className={styles.navbarToggle} onClick={toggleNavbar}>&#9776;</button>
       <nav ref={navRef} className={`${styles.nav} ${isNavVisible ? styles.navVisible : ''}`}>
         <ul className={styles.navList} onClick={hideNavbar}>
           <li className={styles.navItem}><a href="#features" className={styles.navLink}>Features</a></li>
-          <li className={styles.navItem}><a href="#security" className={styles.navLink}>Security</a></li>
+          <li className={styles.navItem}>
+            <Link href="/about" legacyBehavior>
+              <a className={styles.navLink}>About Us</a>
+            </Link>
+          </li>
           <li className={styles.navItem}><a href="#pricing" className={styles.navLink}>Pricing</a></li>
           <li className={styles.navItem}><a href="#contact" className={styles.navLink}>Contact</a></li>
         </ul>

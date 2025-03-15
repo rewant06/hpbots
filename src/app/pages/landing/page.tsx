@@ -9,6 +9,7 @@ import Features from '../landing/Features'
 import Advertisement from '../components/Advertisement';
 import Services from '../landing/Services';
 // import Pricing from '../components/Pricing';
+import About from '../about/About';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import styles from '../landing/styless/Home.module.css';
@@ -30,7 +31,7 @@ const HelpingBotsLanding2: React.FC = () => {
 
 
       <Header />
-      <Hero />
+      <About />
       <div className={styles.sidebarAd}>
         <p>Sponsored Content</p>
       </div>
@@ -42,6 +43,7 @@ const HelpingBotsLanding2: React.FC = () => {
         <p>Special Offers</p>
       </div>
       <Contact />
+    
       <Footer />
     </div>
   );
