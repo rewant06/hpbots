@@ -1,27 +1,47 @@
 .cardItem {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    max-width: 320px;
-    text-align: center;
+    background: #fff; /* Sets the background color of the card to white */
+    padding: 1.5rem; /* Adds padding inside the card for spacing */
+    border-radius: 12px; /* Rounds the corners of the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow to the card for a 3D effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform, box-shadow, and background-color properties */
+    width: 100%; /* Sets the width of the card to 100% of its container */
+    max-width: 350px; /* Sets the maximum width of the card to 350px */
+    text-align: center; /* Centers the text inside the card */
 }
 
 .cardItem:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* Moves the card up by 5px when hovered */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Increases the shadow for a more pronounced 3D effect when hovered */
+    background-color: #4A90E2; /* Changes the background color to blue when hovered */
 }
 
 .cardItem h3 {
-    margin-top: 1rem;
-    font-size: 1.4rem;
-    color: #090909;
+    margin-top: 1rem; /* Adds a margin at the top of the heading */
+    font-size: 1.4rem; /* Sets the font size of the heading */
+    color: #090909; /* Sets the color of the heading text */
 }
 
 .cardItem p {
-    font-size: 1rem;
-    color: #555;
-    margin-top: 0.5rem;
+    font-size: 1rem; /* Sets the font size of the paragraph text */
+    color: #555; /* Sets the color of the paragraph text */
+    margin-top: 0.5rem; /* Adds a margin at the top of the paragraph */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .cardItem {
+        max-width: 100%; /* Ensure the card takes full width on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    
+
+    .cardItem {
+        max-width: 100%; /* Ensure the card takes full width on mobiles */
+    }
+
+    .cardItem p {
+        display: none; /* Hide the paragraph on mobile devices */
+    }
 }
