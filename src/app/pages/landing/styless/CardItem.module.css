@@ -41,6 +41,11 @@
         max-width: 100%; /* Ensure the card takes full width on mobiles */
     }
 
+    .cardItem h3 {
+    
+        font-size: 1rem; /* Sets the font size of the heading */
+        
+    }
     .cardItem p {
         display: none; /* Hide the paragraph on mobile devices */
     }
