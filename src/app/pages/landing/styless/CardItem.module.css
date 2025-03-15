@@ -46,6 +46,13 @@
         font-size: 1rem; /* Sets the font size of the heading */
         
     }
+
+    
+    .cardItem img {
+        width: 20px; /* Reduce the icon size for mobile devices */
+        height: 20px; /* Reduce the icon size for mobile devices */
+    }
+
     .cardItem p {
         display: none; /* Hide the paragraph on mobile devices */
     }
