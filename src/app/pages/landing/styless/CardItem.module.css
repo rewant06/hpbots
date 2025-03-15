@@ -1,0 +1,27 @@
+.cardItem {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+}
+
+.cardItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cardItem h3 {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: #4A00E0;
+}
+
+.cardItem p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+}

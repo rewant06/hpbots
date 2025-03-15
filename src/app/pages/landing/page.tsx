@@ -5,9 +5,9 @@ import Head from 'next/head';
 import { gsap } from 'gsap';
 import Header from '../components/Header'
 import Hero from '../components/Hero';
-import Features from '../components/Features';
+import Features from '../landing/Features'
 import Advertisement from '../components/Advertisement';
-import Services from '../components/Services';
+import Services from '../landing/Services';
 import Pricing from '../components/Pricing';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
