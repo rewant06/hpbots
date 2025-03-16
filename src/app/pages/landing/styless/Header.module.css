@@ -93,6 +93,13 @@
   .navVisible .navList {
       display: flex;
   }
+
+  /* .nav.navVisible {
+    display: flex;
+    flex-direction: column;
+} */
+
+
 }
 
 @media (max-width: 480px) {

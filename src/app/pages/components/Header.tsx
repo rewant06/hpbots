@@ -34,21 +34,32 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-        <Link href="/" legacyBehavior>
+        {/* <Link href="/" legacyBehavior>
           <a>
             <Image src="/logo.png" alt="Helping Bots Logo" className={styles.logo} width={50} height={50} />
           </a>
-        </Link>
+        </Link> */}
+
+          <Link href="/">
+            <Image src="/logo.png" alt="Helping Bots Logo" className={styles.logo} width={50} height={50} />
+          </Link>
+
+        
+
+
       </div>
       <button className={styles.navbarToggle} onClick={toggleNavbar}>&#9776;</button>
       <nav ref={navRef} className={`${styles.nav} ${isNavVisible ? styles.navVisible : ''}`}>
         <ul className={styles.navList} onClick={hideNavbar}>
           <li className={styles.navItem}><a href="#features" className={styles.navLink}>Features</a></li>
           <li className={styles.navItem}>
-            <Link href="/about" legacyBehavior>
+            {/* <Link href="/about" legacyBehavior>
               <a className={styles.navLink}>About Us</a>
-            </Link>
+            </Link> */}
+            <Link href="/about" className={styles.navLink}>About Us</Link>
+
           </li>
+          
           <li className={styles.navItem}><a href="#pricing" className={styles.navLink}>Pricing</a></li>
           <li className={styles.navItem}><a href="#contact" className={styles.navLink}>Contact</a></li>
         </ul>
