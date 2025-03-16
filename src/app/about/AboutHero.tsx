@@ -2,8 +2,8 @@
 
 import React from "react";
 import BackgroundImage from "@/app/pages/components/BackgroundImage";
-import Links from "@/app/pages/components/Links";
-import Stats from "@/app/pages/components/Stats";
+// import Links from "@/app/pages/components/Links";
+// import Stats from "@/app/pages/components/Stats";
 
 const links = [
     { name: "Open roles", href: "#" },
