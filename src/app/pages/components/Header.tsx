@@ -1,7 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from '../landing/styless/Header.module.css';
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "../landing/styless/Header.module.css";
 
 const Header: React.FC = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -23,45 +25,53 @@ const Header: React.FC = () => {
     };
 
     if (isNavVisible) {
-      document.addEventListener('click', handleClickOutside);
+      document.addEventListener("click", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   }, [isNavVisible]);
 
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-        {/* <Link href="/" legacyBehavior>
-          <a>
-            <Image src="/logo.png" alt="Helping Bots Logo" className={styles.logo} width={50} height={50} />
-          </a>
-        </Link> */}
-
-          <Link href="/">
-            <Image src="/logo.png" alt="Helping Bots Logo" className={styles.logo} width={50} height={50} />
-          </Link>
-
-        
-
-
+        <Link href="/">
+          <Image
+            src="/logo.png"
+            alt="Helping Bots Logo"
+            className={styles.logo}
+            width={50}
+            height={50}
+            priority
+          />
+        </Link>
       </div>
-      <button className={styles.navbarToggle} onClick={toggleNavbar}>&#9776;</button>
-      <nav ref={navRef} className={`${styles.nav} ${isNavVisible ? styles.navVisible : ''}`}>
+      <button className={styles.navbarToggle} onClick={toggleNavbar}>
+        &#9776;
+      </button>
+      <nav ref={navRef} className={`${styles.nav} ${isNavVisible ? styles.navVisible : ""}`}>
         <ul className={styles.navList} onClick={hideNavbar}>
-          <li className={styles.navItem}><a href="#features" className={styles.navLink}>Features</a></li>
           <li className={styles.navItem}>
-            {/* <Link href="/about" legacyBehavior>
-              <a className={styles.navLink}>About Us</a>
-            </Link> */}
-            <Link href="/about" className={styles.navLink}>About Us</Link>
-
+            <a href="#features" className={styles.navLink}>
+              Features
+            </a>
           </li>
-          
-          <li className={styles.navItem}><a href="#pricing" className={styles.navLink}>Pricing</a></li>
-          <li className={styles.navItem}><a href="#contact" className={styles.navLink}>Contact</a></li>
+          <li className={styles.navItem}>
+            <Link href="/about" legacyBehavior>
+              <a className={styles.navLink}>About Us</a>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <a href="#pricing" className={styles.navLink}>
+              Pricing
+            </a>
+          </li>
+          <li className={styles.navItem}>
+            <a href="#contact" className={styles.navLink}>
+              Contact
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
