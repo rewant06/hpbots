@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../landing/styless/Hero.module.css';
 
 const Hero: React.FC = () => {
@@ -10,7 +11,10 @@ const Hero: React.FC = () => {
         <p>{"Don't keep secrets, share them anonymously."}</p>
 
         <div className={styles.ctaButtons}>
-          <button type="button" className={styles.btnPrimary}>Get Started</button>
+        <Link href="/login" legacyBehavior>
+        <button type="button" className={styles.btnPrimary}>Get Started</button>
+          </Link>
+         
           <button type="button" className={styles.btnSecondary}>Learn More</button>
         </div>
       </div>
