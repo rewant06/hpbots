@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
-import Header from '../pages/components/Header'
+import Navbar from '../pages/components/Navbar'
 import AboutHero from './AboutHero';
 
 import Footer from '../pages/components/Footer';
@@ -16,7 +16,7 @@ const About: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <Header />
+      <Navbar />
       <AboutHero />
       <Footer />
     </div>

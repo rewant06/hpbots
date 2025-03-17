@@ -3,7 +3,8 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { gsap } from 'gsap';
-import Header from '../components/Header'
+// import Header from '../components/Header'
+import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Features from '../landing/Features'
 import Advertisement from '../components/Advertisement';
@@ -30,7 +31,8 @@ const HelpingBotsLanding2: React.FC = () => {
 </Head>
 
 
-      <Header />
+      {/* <Header /> */}
+      <Navbar/>
       <Hero />
       {/* <About /> */}
       <div className={styles.sidebarAd}>
