@@ -55,7 +55,7 @@ export default function Navbar() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link href="#" legacyBehavior>
+            <Link href="/login" legacyBehavior>
               <a className="text-sm leading-6 font-semibold text-gray-900">
                 Log in <span aria-hidden="true">&rarr;</span>
               </a>
