@@ -121,7 +121,7 @@
 
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -141,6 +141,26 @@ export default function Navbar() {
   const toggleNavbar = () => {
     setIsNavVisible(!isNavVisible);
   };
+
+  const hideNavbar = () => {
+    setIsNavVisible(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        hideNavbar();
+      }
+    };
+
+    if (isNavVisible) {
+      document.addEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isNavVisible]);
 
   return (
     <div className="bg-white">
@@ -206,9 +226,9 @@ export default function Navbar() {
         {isNavVisible && (
           <div
             ref={navRef}
-            className="lg:hidden bg-black bg-opacity-80 shadow-md absolute top-full left-0 w-full"
+            className="lg:hidden bg-black bg-opacity-30 shadow-md absolute top-full left-0 w-full flex justify-center items-center"
           >
-            <nav className="flex flex-col space-y-4 px-6 py-4">
+            <nav className="flex flex-col items-center space-y-4 px-6 py-4">
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href} legacyBehavior>
                   <a className="text-sm font-semibold text-white hover:text-gray-300">
