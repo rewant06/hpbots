@@ -1,119 +1,112 @@
 .header {
-  background: #333;
-  color: #fff;
-  padding: 0.7rem 0; /* Decreased padding */
-  text-align: center;
-  position: fixed; /* Ensure the header is always visible */
-  top: 0;
-  width: 100%; /* Ensure the header takes the full width */
-  z-index: 100;
+  background: #333; /* Sets the background color of the header to dark gray. */
+  color: #fff; /* Sets the text color to white. */
+  padding: 0.7rem 0; /* Adds vertical padding to the header. */
+  text-align: center; /* Centers the text inside the header. */
+  position: fixed; /* Makes the header fixed at the top of the page. */
+  top: 0; /* Positions the header at the very top of the page. */
+  width: 100%; /* Ensures the header spans the full width of the page. */
+  z-index: 100; /* Ensures the header appears above other elements. */
 }
 
 .header::after {
-  content: '';
-  display: table;
-  clear: both;
+  content: ''; /* Adds an empty pseudo-element after the header. */
+  display: table; /* Creates a block formatting context to clear floats. */
+  clear: both; /* Clears any floated elements inside the header. */
 }
 
 .logoContainer {
-  float: left;
-  margin-left: 15px; /* Decreased margin */
+  float: left; /* Aligns the logo container to the left of the header. */
+  margin-left: 15px; /* Adds left margin to the logo container. */
 }
 
 .logo {
-  width: 50px; /* Decreased logo size */
-  height: auto;
+  width: 50px; /* Sets the width of the logo image. */
+  height: auto; /* Maintains the aspect ratio of the logo image. */
 }
 
 .nav {
-  float: right;
-  margin-right: 15px; /* Decreased margin */
+  float: right; /* Aligns the navigation to the right of the header. */
+  margin-right: 15px; /* Adds right margin to the navigation. */
 }
 
 .navList {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  padding: 0; /* Removes padding from the navigation list. */
+  margin: 0; /* Removes margin from the navigation list. */
+  list-style: none; /* Removes bullet points from the list items. */
 }
 
 .navItem {
-  display: inline;
-  margin-left: 15px; /* Decreased margin */
+  display: inline; /* Displays the navigation items inline (horizontally). */
+  margin-left: 15px; /* Adds left margin to each navigation item. */
 }
 
 .navItem a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.9rem; /* Decreased font size */
+  color: #fff; /* Sets the text color of navigation links to white. */
+  text-decoration: none; /* Removes the underline from navigation links. */
+  font-size: 0.9rem; /* Sets the font size of navigation links. */
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Styles for screens with a width of 768px or less. */
   .logoContainer {
-      float: none;
-      margin: 0 auto;
-      text-align: center;
+      float: none; /* Removes the float property for the logo container. */
+      margin: 0 auto; /* Centers the logo container horizontally. */
+      text-align: center; /* Centers the content inside the logo container. */
   }
 
   .logo {
-      width: 40px; /* Adjust logo size for tablets */
+      width: 40px; /* Reduces the size of the logo for smaller screens. */
   }
 
   .nav {
-      float: none;
-      margin: 0 auto;
-      text-align: center;
+      float: none; /* Removes the float property for the navigation. */
+      margin: 0 auto; /* Centers the navigation horizontally. */
+      text-align: center; /* Centers the content inside the navigation. */
   }
 
   .navList {
-      display: none;
-      flex-direction: column;
-      align-items: center;
+      display: none; /* Hides the navigation list by default. */
+      flex-direction: column; /* Stacks the navigation items vertically. */
+      align-items: center; /* Centers the navigation items horizontally. */
   }
 
   .navItem {
-      display: block;
-      margin: 10px 0;
+      display: block; /* Displays the navigation items as block elements. */
+      margin: 10px 0; /* Adds vertical margin to each navigation item. */
   }
 
   .navbarToggle {
-      display: block;
-      background: #333;
-      color: #fff;
-      padding: 0.4rem 0.8rem; /* Decreased padding */
-      border: none;
-      cursor: pointer;
-      margin: 0 auto;
-      font-size: 1.3rem; /* Decreased font size */
-      position: absolute;
-      right: 10px; /* Adjusted position */
-      top: 10px; /* Adjusted position */
+      display: block; /* Displays the toggle button for the navbar. */
+      background: #333; /* Sets the background color of the toggle button. */
+      color: #fff; /* Sets the text color of the toggle button to white. */
+      padding: 0.4rem 0.8rem; /* Adds padding to the toggle button. */
+      border: none; /* Removes the border from the toggle button. */
+      cursor: pointer; /* Changes the cursor to a pointer when hovering. */
+      margin: 0 auto; /* Centers the toggle button horizontally. */
+      font-size: 1.3rem; /* Sets the font size of the toggle button. */
+      position: absolute; /* Positions the toggle button absolutely. */
+      right: 10px; /* Positions the toggle button 10px from the right. */
+      top: 10px; /* Positions the toggle button 10px from the top. */
   }
 
   .navVisible .navList {
-      display: flex;
+      display: flex; /* Displays the navigation list when the navbar is visible. */
   }
-
-  /* .nav.navVisible {
-    display: flex;
-    flex-direction: column;
-} */
-
-
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { /* Styles for screens with a width of 480px or less. */
   .logo {
-      width: 40px; /* Adjust logo size for mobile */
+      width: 40px; /* Further reduces the size of the logo for smaller screens. */
   }
 
   .navbarToggle {
-      padding: 0.3rem 0.6rem; /* Decreased padding */
+      padding: 0.3rem 0.6rem; /* Reduces the padding of the toggle button. */
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 769px) { /* Styles for screens with a width of 769px or more. */
   .navbarToggle {
-      display: none; /* Hide navbar toggle button on larger screens */
+      display: none; /* Hides the toggle button on larger screens. */
   }
 }
